@@ -2,24 +2,16 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./Containers/Home";
 import Login from "./Components/Login";
+import Header from "./Components/Header/Header";
 
 const App = () => {
   return (
     <div>
       <Router>
         <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-            </ul>
-          </nav>
           <Switch>
             <Route exact path="/">
+              <Header />
               <Home />
             </Route>
             <Route exact path="/login">

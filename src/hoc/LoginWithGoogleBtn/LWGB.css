@@ -1,0 +1,9 @@
+.btn-A {
+    background : none;
+    padding: 0.4rem 0rem;
+    border: 1px solid lightgrey ;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

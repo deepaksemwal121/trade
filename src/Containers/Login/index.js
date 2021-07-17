@@ -47,7 +47,7 @@ const Login = () => {
 
   return (
     <Container maxWidth="md">
-      <Grid container>
+      <Grid container style={{margin : '2rem 0'}}>
         <Grid
           item
           xs={12}

@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <div className="main__container">
       <div className="brand__box">
-        <h2 className="brand__name">Trade IN </h2>
+        <Link to="/">
+          <h2 className="brand__name">Trade IN </h2>
+        </Link>
       </div>
       <div className="nav__menu">
         <ul>
@@ -17,10 +19,10 @@ const Header = () => {
         </ul>
       </div>
       <div className="nav__user">
-        <Link to="/login">
+        <Link to="/signup">
           <button className="signup__btn">Sign Up </button>
         </Link>
-        <Link>
+        <Link to="/login">
           <button className="signin__btn">Sign In </button>
         </Link>
       </div>

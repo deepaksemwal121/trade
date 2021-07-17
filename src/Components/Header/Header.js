@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-
+import NotBell from "../../Assets/notification.svg";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="main__container">
@@ -17,7 +17,12 @@ const Header = () => {
         </ul>
       </div>
       <div className="nav__user">
-        <NotificationsIcon />
+        <Link to="/login">
+          <button className="signup__btn">Sign Up </button>
+        </Link>
+        <Link>
+          <button className="signin__btn">Sign In </button>
+        </Link>
       </div>
     </div>
   );

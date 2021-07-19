@@ -12,6 +12,9 @@ import {
   Settings,
 } from "@material-ui/icons";
 import React from "react";
+import LeftSidebar from "../../Components/LeftSidebar";
+import PostWidget from "../../hoc/PostWidget";
+import StoryWidget from "../../hoc/StoryWidget";
 
 const Home = () => {
   const [value, setValue] = React.useState("recents");
@@ -23,7 +26,7 @@ const Home = () => {
     <div>
       <Grid container>
         <Grid item xs={12} lg={3}>
-          groups and online friends area
+          <LeftSidebar/>
         </Grid>
         <Grid item xs={12} lg={6} style={{ backgroundColor: "white" }}>
           <Container maxWidth="sm">
@@ -34,7 +37,7 @@ const Home = () => {
                 backgroundColor: "#daddfe",
                 margin: "1rem 0",
                 padding: "0.4rem",
-                borderRadius : '0 0 1rem 1rem'
+                borderRadius: "0 0 1rem 1rem",
               }}
             >
               <BottomNavigationAction
@@ -63,6 +66,15 @@ const Home = () => {
                 icon={<Settings />}
               />
             </BottomNavigation>
+          </Container>
+          <Container>
+            <div>
+              <StoryWidget/>
+            </div>
+            <div>
+              <PostWidget />
+              <PostWidget />
+            </div>
           </Container>
         </Grid>
         <Grid item xs={12} lg={3}>

@@ -44,7 +44,8 @@
   padding-top: 10px;
   justify-content: space-evenly;
 }
-.nav__user a {
+
+.main__container a {
   text-decoration: none;
   padding-top: 10px;
 }

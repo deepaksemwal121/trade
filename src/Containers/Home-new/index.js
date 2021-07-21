@@ -13,6 +13,7 @@ import {
 } from "@material-ui/icons";
 import React from "react";
 import LeftSidebar from "../../Components/LeftSidebar";
+import RightSidebar from "../../Components/RightSidebar";
 import PostWidget from "../../hoc/PostWidget";
 import StoryWidget from "../../hoc/StoryWidget";
 
@@ -78,7 +79,7 @@ const Home = () => {
           </Container>
         </Grid>
         <Grid item xs={12} lg={3}>
-          indexing area
+          <RightSidebar/>
         </Grid>
       </Grid>
     </div>

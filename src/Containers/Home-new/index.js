@@ -12,6 +12,7 @@ import {
   Settings,
 } from "@material-ui/icons";
 import React from "react";
+import { Link } from "react-router-dom";
 import LeftSidebar from "../../Components/LeftSidebar";
 import RightSidebar from "../../Components/RightSidebar";
 import PostWidget from "../../hoc/PostWidget";
@@ -27,7 +28,7 @@ const Home = () => {
     <div>
       <Grid container>
         <Grid item xs={12} lg={3}>
-          <LeftSidebar/>
+          <LeftSidebar />
         </Grid>
         <Grid item xs={12} lg={6} style={{ backgroundColor: "white" }}>
           <Container maxWidth="sm">
@@ -56,11 +57,13 @@ const Home = () => {
                 value="dashboard"
                 icon={<DashboardOutlined />}
               />
-              <BottomNavigationAction
-                label="Chats"
-                value="chats"
-                icon={<ChatBubbleOutline />}
-              />
+              <Link to="/chat" target="_blank">
+                <BottomNavigationAction
+                  label="Chats"
+                  value="chats"
+                  icon={<ChatBubbleOutline />}
+                />
+              </Link>
               <BottomNavigationAction
                 label="Settings"
                 value="settings"
@@ -70,7 +73,7 @@ const Home = () => {
           </Container>
           <Container>
             <div>
-              <StoryWidget/>
+              <StoryWidget />
             </div>
             <div>
               <PostWidget />
@@ -79,7 +82,7 @@ const Home = () => {
           </Container>
         </Grid>
         <Grid item xs={12} lg={3}>
-          <RightSidebar/>
+          <RightSidebar />
         </Grid>
       </Grid>
     </div>

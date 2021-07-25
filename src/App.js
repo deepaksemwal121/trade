@@ -9,6 +9,7 @@ import Chat from "./Containers/Chat";
 import { Provider } from "react-redux";
 import { Persistor, Store } from "./Store/Store";
 import { PersistGate } from "redux-persist/integration/react";
+import Market from "./Components/Market";
 
 const App = () => {
   return (
@@ -20,6 +21,9 @@ const App = () => {
             <Switch>
               <Route exact path="/landing">
                 <Landing />
+              </Route>
+              <Route exact path="/market">
+                <Market />
               </Route>
               <Route exact path="/login">
                 <Login />

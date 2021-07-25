@@ -12,7 +12,12 @@ import React from "react";
 const ChatRightSidebar = () => {
   const FileTypeWidget = ({ fileName, fileCount, fileSize }) => {
     return (
-      <Grid container justifyContent="space-between" alignItems="center" style={{margin : '0.5rem 0'}}>
+      <Grid
+        container
+        justifyContent="space-between"
+        alignItems="center"
+        style={{ margin: "0.5rem 0" }}
+      >
         <Grid item>
           <div
             style={{

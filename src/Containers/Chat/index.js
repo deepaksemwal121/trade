@@ -1,7 +1,4 @@
-import {
-  Container,
-  Grid,
-} from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import React from "react";
 import ChatArea from "./ChatArea";
 import ChatLeftSidebar from "./ChatLeftSidebar";
@@ -20,13 +17,13 @@ const Chat = () => {
         }}
       >
         <Grid item xs={3}>
-          <ChatLeftSidebar/>
+          <ChatLeftSidebar />
         </Grid>
         <Grid item xs={6}>
-          <ChatArea/>
+          <ChatArea />
         </Grid>
         <Grid item xs={3}>
-          <ChatRightSidebar/>
+          <ChatRightSidebar />
         </Grid>
       </Grid>
     </Container>

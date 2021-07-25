@@ -1,8 +1,10 @@
 import React from "react";
 import "./Header.css";
-import NotBell from "../../Assets/notification.svg";
 import { Link } from "react-router-dom";
-const Header = () => {
+import { connect } from "react-redux";
+import UserWidget from "../UserWidget";
+const Header = ({user}) => {
+  console.log(user);
   return (
     <div className="main__container">
       <div className="brand__box">
@@ -19,15 +21,27 @@ const Header = () => {
         </ul>
       </div>
       <div className="nav__user">
-        <Link to="/signup">
-          <button className="signup__btn">Sign Up </button>
-        </Link>
-        <Link to="/login">
-          <button className="signin__btn">Sign In </button>
-        </Link>
+        {user.displayName ? (
+          <UserWidget/>
+        ) : (
+          <div className="auth">
+            <Link to="/signup">
+              <button className="signup__btn">Sign Up </button>
+            </Link>
+            <Link to="/login">
+              <button className="signin__btn">Sign In </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    user: state.user.user,
+  };
+};
+
+export default connect(mapStateToProps)(Header);

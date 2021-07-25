@@ -27,6 +27,8 @@ const Market = () => {
             </form>
           </div>
           <MarketCompanyList />
+          <MarketCompanyList />
+          <MarketCompanyList />
         </div>
       </div>
       <div className="main__section">Main</div>

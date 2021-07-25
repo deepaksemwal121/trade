@@ -15,6 +15,7 @@
 .list__section {
   background-color: grey;
   border-radius: 5px;
+  padding: 5px;
 }
 .list__header {
   display: flex;
